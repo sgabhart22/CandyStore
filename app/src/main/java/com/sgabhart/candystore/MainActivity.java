@@ -1,5 +1,6 @@
 package com.sgabhart.candystore;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -35,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
         switch(id){
             case R.id.action_add:
+                Intent insertIntent = new Intent(this, InsertActivity.class);
+                this.startActivity(insertIntent);
                 return true;
             case R.id.action_delete:
                 return true;
