@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
                 this.startActivity(deleteIntent);
                 return true;
             case R.id.action_update:
+                Intent updateIntent = new Intent(this, UpdateActivity.class);
+                this.startActivity(updateIntent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
