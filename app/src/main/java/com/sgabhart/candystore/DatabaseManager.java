@@ -25,8 +25,8 @@ public class DatabaseManager extends SQLiteOpenHelper {
 
     public void onCreate(SQLiteDatabase db){
         String sqlCreate = "create table " + TABLE_CANDY + "( " + ID +
-                " integer primary key autoincrement" + NAME + " text, " +
-                PRICE + "  real )";
+                " integer primary key autoincrement, " + NAME + " text, " +
+                PRICE + " real )";
 
         db.execSQL(sqlCreate);
     } // onCreate
@@ -38,7 +38,7 @@ public class DatabaseManager extends SQLiteOpenHelper {
 
     public void insert(Candy candy){
         SQLiteDatabase db = this.getWritableDatabase();
-        String sqlInsert = "insert into " + TABLE_CANDY + " values(null, '" +
+        String sqlInsert = "insert into " + TABLE_CANDY + " values( null, '" +
                 candy.getName() + "', '" + candy.getPrice() + "' )";
 
         db.execSQL(sqlInsert);
